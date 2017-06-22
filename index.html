@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<!--Estilos de Bootstrap 3-->
-		<link rel="stylesheet" type="text/css" href="./app/libs/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./app/libs/bootstrap/css/bootstrap.css">
 		<title>Prueba Técnica Desarrollador de Software</title>
 	</head>
 	<body>
@@ -13,7 +13,7 @@
 		<header class="text-center bg-info">
 			<h1>Prueba Técnica Desarrollador de Software</h1>
 		</header>
-		<div class="content">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<ui-view></ui-view>
@@ -31,13 +31,24 @@
 		<!--Librerias Angular.js-->
 		<!--Libreria Angular.js 1.6-->
 		<script type="text/javascript" src="./app/libs/angular/angular.min.js"></script>
-		
+		<!--Libreria de Angular ng-router-->
+		<script type="text/javascript" src="./app/libs/angular/angular-route.js"></script>
 		<!--Libreria de Angular ui-router -->
-		<script type="text/javascript" src="./app/libs/angular/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="./app/libs/angular/angular-ui-router.js"></script>
+		<!--Producción, Codigo minificado-->
+		<!--<script type="text/javascript" src="./app/minifi/libs.min.js"></script>-->
 
-		<!--Módulos-->
+		<!--Angular-->
 		<!--Módulo Principal-->
 		<script type="text/javascript" src="./app/angular/app.js"></script>
+		<!--Configuracion de rutas-->
+		<script type="text/javascript" src="./app/angular/routes.js"></script>
+
+		<!--Módulos-->
+		<script type="text/javascript" src="./app/angular/module/Login/controller/LoginController.js"></script>
+
+		<!--Libreria para recargar el explorador-->
 
 	</body>
 </html>
+

@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "Prueba para el ingreso de cun",
   "main": "gulpFile.js",
-  "dependencies": {
-    "glup": "^1.0.14"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "glup": "^1.0.14"
+    "babili": "^0.1.4",
+    "glup": "^1.0.14",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-html": "^0.4.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "pump": "^1.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",

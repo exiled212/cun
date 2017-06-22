@@ -1,0 +1,23 @@
+<div class="row text-center">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="alert alert-info">
+			<b>1.	El usuario llega a la página de presentación y diligencia su número de cédula. Debe haber validación de datos para que la página solo reciba números de cédula reales de Colombia.</b>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading"> <b>Ingrese sú Cédula de Ciudadanía</b></div>
+			<div class="panel-body">
+				<form class="form" ng-submit="functions.submit()">
+					<div class="form-group">
+						<label for="cedulaCiudadania">Cédula de Ciudadanía</label>
+						<input id="cedulaCiudadania" type="text" class="form-control" ng-model="user.document">
+					</div>
+					<hr>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success"><b>Empezar Prueba</b></button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>
