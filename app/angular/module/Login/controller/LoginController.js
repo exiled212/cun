@@ -1,7 +1,9 @@
 (()=>{
 		app
 			.controller('LoginController', ['$scope', function($scope){
+				//Almacenamos las funciones dentro de una variable del scope para facilitar su acceso.
 				$scope.functions = {};
+				//
 				$scope.user = {};
 
 
