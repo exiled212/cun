@@ -1,12 +1,19 @@
 (()=>{
 		app
-			.controller('LoginController', 
+			/*
+			 * Controlador de la función de Ingreso para usuarios regulares, 
+			 */
+			.controller('LoginController',
 				[				'$scope', 	'$state', 	'User'
 				, function(		$scope, 	$state,		User	){
 				//Almacenamos las funciones dentro de una variable del scope para facilitar su acceso.
 				$scope.functions = {};
+				//Contenedor principal de los datos del formulario
 				$scope.user = {};
 
+				//Funcion que permitira validar la existencia del documento en la base de datos
+				//En caso de que no exista, se registra de forma automatica, caso contrario solo actualizara
+				//La fecha de ingreso 'date_update'
 				$scope.functions.submit = ()=>{
 					User.findDocument($scope.user.document)
 						.then(result=>{
@@ -14,12 +21,9 @@
 							let document;
 							if(result.status == 'success'){
 								document = result.data.document;
+								//Redirecciona al modulo 'main.questions' pasando el documento como parametro.
 								$state.go('main.questions', {document});
-								
 							}
-						})
-						.catch(error=>{
-							console.log(error);
 						})
 				}
 

@@ -10,6 +10,7 @@
 					return answers;
 				},
 
+				//obtenemos todas las respuestas segun la pregunta seleccionada
 				setByQuestion(questionId){
 					$http.get(`/cun/app/php/answers/${questionId}/list`)
 						.then(result=>{

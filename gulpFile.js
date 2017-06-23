@@ -8,7 +8,11 @@
 	gulp.task('angularJs', function(cb){
 		gulp
 			.src([
-				'./app/angular/**/*.js'
+				'./app/angular/*.js',
+				'./app/angular/**/*.js',
+				'./app/angular/**/**/*.js',
+				'./app/angular/**/**/**/*.js',
+				'./app/angular/**/**/**/**/*.js'
 			])
 			.pipe(concat('app.min.js'))
 			.pipe(babel({presets: ['babili']}))

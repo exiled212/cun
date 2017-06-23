@@ -1,5 +1,6 @@
 <?php
 
+	//Configuracion de slim framework para la API
 	return [
 		'path'=>[
 			'controller' =>'./api/controller',

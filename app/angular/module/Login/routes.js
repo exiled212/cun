@@ -3,8 +3,7 @@
 		//Configuración de ui-router
 			
 		.config(
-			//Lista de nombre real de variables que cambiaran al minificar
-					[	'$stateProvider',	'$urlRouterProvider'	, 
+			[			'$stateProvider',	'$urlRouterProvider'	, 
 			function(	$stateProvider,		$urlRouterProvider	){
 				// Ruta del módulo de Login
 				let pathLogin 		= 	'./app/angular/module/Login'
@@ -15,6 +14,7 @@
 					templateUrl:`${pathLogin}/views/index.html`
 				}]
 
+				//Recorremos todas las rutas del módulo y se las comunicamos a ui-router
 				loginModules.forEach(module=>$stateProvider.state(module))
 
 

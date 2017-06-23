@@ -1,12 +1,19 @@
 <div class="alert alert-info">
-	<b>2.	Una vez se acepta el número de cédula, se pasa a una página donde están las preguntas. El usuario podrá contestar las preguntas dando clic o tocando las respuestas. Al menos una de las preguntas deberá ser de selección múltiple con múltiple respuesta. Las demás pueden ser de selección múltiple con única respuesta. Habrá una sexta y última pregunta no evaluable de comentarios, en la cual el usuario podrá escribir un texto donde formula sus opiniones sobre la prueba que acaba de presentar.</b>
+	<p><b>2.	Una vez se acepta el número de cédula, se pasa a una página donde están las preguntas. El usuario podrá contestar las preguntas dando clic o tocando las respuestas. Al menos una de las preguntas deberá ser de selección múltiple con múltiple respuesta. Las demás pueden ser de selección múltiple con única respuesta. Habrá una sexta y última pregunta no evaluable de comentarios, en la cual el usuario podrá escribir un texto donde formula sus opiniones sobre la prueba que acaba de presentar.</b></p>
+	<br/>
+	<p><b>3.	Al final de la página habrá un botón de envío. La aplicación deberá preguntar al usuario si está seguro de enviar las preguntas y podrá enviarlas definitivamente o cancelar y volver a la pantalla de las preguntas.</b></p>
+	<br/>
+	<p><b>4.	La página incluirá un cronómetro de diez minutos, al cabo de los cuales se forzará el envío de lo que se lleve contestado hasta el momento. Es decir, las respuestas se enviarán cuando el usuario acepte o a los diez minutos de haber empezado la prueba. Lo que suceda primero.</b></p>
 </div>
-<div class="col-md-5">
+<div class="alert alert-warning">
+	<h1> Tiempo Restante para terminar la prueba: <span ng-bind="time"></span>:<span ng.bind="seconds"></span>Min</h1>
+</div>
+<div class="col-md-5" >
 	<div class="panel panel-default">
-		<div class="panel-heading">Lista de Preguntas</div>
+		<div class="panel-heading">Lista de Preguntas </div>
 		<div class="panel-body">
-			<div class="nav nav-pills  nav-stacked">
-				<li ng-repeat="row in questions" ><a ui-sref="main.questions.answers({questionId:row.id, isComent:row.is_coment})" ui-sref-active="active" class="btn btn-default"><span ng-bind="row.question"></span></a></li>
+			<div class="nav nav-pills  nav-stacked table-responsive">
+				<li ng-repeat="row in questions" ><a ui-sref="main.questions.answers({questionId:row.id, isComent:row.is_comment})" ui-sref-active="active" class="btn btn-default"><span ng-bind="row.question"></span></a></li>
 			</div>
 		</div>	
 	</div>
@@ -16,6 +23,15 @@
 		<div class="panel-heading">Respuestas</div>
 		<div class="panel-body">
 			<ui-view></ui-view>
+		</div>	
+	</div>
+</div>
+<div class="col-md-12">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="col-md-6 col-md-offset-3">
+				<button type="button" class="btn btn-success btn-block" ng-click="functions.submit()"><b>Enviar Respuestas</b></button>
+			</div>
 		</div>	
 	</div>
 </div>

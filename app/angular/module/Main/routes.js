@@ -19,7 +19,7 @@
 
 					{
 						name:"main.questions",
-						url:"prueba/:document",
+						url:"prueba/:document/",
 						controller:"QuestionsController",
 						templateUrl:`${pathLogin}/views/index.html`
 					},
@@ -29,6 +29,13 @@
 						url:"preguntas/:questionId/:isComent",
 						controller:"AnswersController",
 						templateUrl:`${pathLogin}/views/answers.html`
+					},
+
+					{
+						name:"main.result",
+						url:"resultado/:document",
+						controller:"ResultController",
+						templateUrl:`${pathLogin}/views/result.html`
 					}
 				]
 

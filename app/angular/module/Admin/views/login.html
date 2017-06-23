@@ -1,0 +1,28 @@
+<div class="alert alert-info">
+	<b>6.	Deberá haber un acceso especial protegido para consultar las respuestas, las calificaciones, los tiempos y los comentarios de los usuarios.</b>
+</div>
+<div class="row text-center">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-default">
+			<div class="panel-heading"> <b>Módulo de Administrador</b></div>
+			<div class="panel-body">
+				<form class="form" ng-submit="functions.submit()">
+					<div class="form-group">
+						<label for="cedulaCiudadania">Usuario</label>
+						<input id="cedulaCiudadania" type="text" class="form-control" ng-model="admin.username" required>
+					</div>
+					<div class="form-group">
+						<label for="cedulaCiudadania">Password</label>
+						<input id="cedulaCiudadania" type="password" class="form-control" ng-model="admin.password" required>
+					</div>
+					<hr>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success"><b>Ingresar</b></button>
+						<button type="button" class="btn btn-info" ui-sref="login" ui-sref-active="active"><b>Cancelar</b></button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>

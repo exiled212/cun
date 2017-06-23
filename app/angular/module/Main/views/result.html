@@ -1,0 +1,29 @@
+<div class="alert alert-info">
+			<b>5.	En la siguiente pantalla se presentará el porcentaje de aciertos logrado y se podrá salir de la aplicación. Se generará la calificación a partir de la información de respuestas correctas que haya en la base de datos.</b>
+		</div>
+<h1>Resultados de la prueba</h1>
+<ul class="list-group">
+  <li class="list-group-item">
+    <span class="badge">{{questionsPorcentCorrects}}%</span>
+    Porcentaje de aciertos
+  </li>
+  <li class="list-group-item">
+    <span class="badge">{{questionsCount}}</span>
+    Número de preguntas
+  </li>
+  <li class="list-group-item">
+    <span class="badge">{{answersResponseCount}}</span>
+    Número de respuestas seleccionadas
+  </li>
+  <li class="list-group-item">
+    <span class="badge">{{answersCorrectsCount}}</span>
+    Número de respuestas correctas
+  </li>
+  <li class="list-group-item">
+    <span class="badge">{{answersResponseCount - answersCorrectsCount}}</span>
+    Respuestas Incorrectas
+  </li>
+</ul>
+<div class="group-button">
+	<button class="btn btn-info" ng-click="functions.close()">Salir</button>
+</div>

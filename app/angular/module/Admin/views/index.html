@@ -1,0 +1,38 @@
+<div class="alert alert-info">
+	<b>6.	Deberá haber un acceso especial protegido para consultar las respuestas, las calificaciones, los tiempos y los comentarios de los usuarios.</b>
+</div>
+<div class="col-md-12">
+	<button type="button" class="btn btn-info" ui-sref="login" ui-sref-active="active"><b>Regresar</b></button>
+	<div class="panel panel-default">
+		<div class="panel-heading">Menu de Admin</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+					<tr>
+						<th>id</th>
+						<th>Cédula de Ciudadania</th>
+						<th>Pregunta</th>
+						<th>Respuesta</th>
+						<th>Respuesta Correcta</th>
+						<th>Fecha de la prueba</th>
+						<th>Comentario</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="row in answersHasUser | orderBy:'-date_generate' ">
+						<td ng-bind="$index"></td>
+						<td ng-bind="row.document"></td>
+						<td ng-bind="row.question"></td>
+						<td ng-bind="row.answer"></td>
+						<td ng-bind="row.is_correct"></td>
+						<td ng-bind="row.date_generate"></td>
+						<td ng-bind="row.comment"></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+	</div>
+</div>
+

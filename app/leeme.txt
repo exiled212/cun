@@ -1,6 +1,3 @@
-# cunTest
-Prueba Técnica Desarrollador de Software
-
 Bienvenidos al sistema de pruebas.
 
 El sistema esta diseñado de forma que pueda ser adaptado a las necesidades del cliente, permite agregar o quitar preguntas y respuestas desde la base de datos (aun no existe el modulo correspondiente para hacerlo de forma grafica, pero se pueden manipular en la base de datos sin problemas), tambien por estar diseñado con bootstrap 3 posee un compartamiento responsivo para que pueda ser manejado desde dispositivos moviles.

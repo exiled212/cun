@@ -1,7 +1,6 @@
 (()=>{
 	app
 		//Configuración de ui-router
-			
 		.config(
 			//Lista de nombre real de variables que cambiaran al minificar
 					[	'$stateProvider',	'$urlRouterProvider'	, 

@@ -1,4 +1,5 @@
 <?php
+	//Modelo base creado con el proposito de agilizar la programacion de los modelos
 	class Model {
 
 		public function __construct(){

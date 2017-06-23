@@ -1,6 +1,6 @@
 <div class="list-group">
-	<a ng-if="isComent == 0" ng-repeat="row in answers" class="list-group-item"><span ng-bind="row.answer"></span></a>
+	<a class="list-group-item" ng-class="functions.checkSelected(row.questions_id, row.id)" ng-repeat="row in answers" ng-if="isComent == 0" ng-click="functions.select(row.questions_id, row.id)" ><span ng-bind="row.answer"></span></a>
 	<div ng-if="isComent == 1" class="form-group">
-		<textarea class="form-control" rows="5" cols="10"></textarea>
+		<textarea ng-model="comment[questionId]" ng-change="functions.changeComments()" class="form-control" rows="5" cols="10"></textarea>
 	</div>
 </div>
