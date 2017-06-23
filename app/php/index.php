@@ -1,10 +1,16 @@
 <?php
-	require('vendor/autoload.php');
+	require('./vendor/autoload.php');
 
-	$app = new Slim\App();
+	$config = require './api/config/config.php';
+	$app = new Slim\App($config);
 
-	$app->post('/user/login/{documento}', function($request, $response, $args){
-		return $response->write("La cédula que ingreso es: ".$args['documento']);
-	});
+	$modelPath = $config['path']['model'];
+	require $modelPath.'/Model.php';
+
+	$routes = $config['path']['routes'];
+
+	require $routes.'/user.php';
+	require $routes.'/questions.php';
+	require $routes.'/answers.php';
 
 	$app->run();

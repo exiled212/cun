@@ -1,0 +1,6 @@
+<div class="list-group">
+	<a ng-if="isComent == 0" ng-repeat="row in answers" class="list-group-item"><span ng-bind="row.answer"></span></a>
+	<div ng-if="isComent == 1" class="form-group">
+		<textarea class="form-control" rows="5" cols="10"></textarea>
+	</div>
+</div>

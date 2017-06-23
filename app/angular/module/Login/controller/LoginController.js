@@ -1,14 +1,26 @@
 (()=>{
 		app
-			.controller('LoginController', ['$scope', function($scope){
+			.controller('LoginController', 
+				[				'$scope', 	'$state', 	'User'
+				, function(		$scope, 	$state,		User	){
 				//Almacenamos las funciones dentro de una variable del scope para facilitar su acceso.
 				$scope.functions = {};
-				//
 				$scope.user = {};
 
-
 				$scope.functions.submit = ()=>{
-					console.log($scope.user)
+					User.findDocument($scope.user.document)
+						.then(result=>{
+							result = result.data;
+							let document;
+							if(result.status == 'success'){
+								document = result.data.document;
+								$state.go('main.questions', {document});
+								
+							}
+						})
+						.catch(error=>{
+							console.log(error);
+						})
 				}
 
 

@@ -1,0 +1,21 @@
+<div class="alert alert-info">
+	<b>2.	Una vez se acepta el número de cédula, se pasa a una página donde están las preguntas. El usuario podrá contestar las preguntas dando clic o tocando las respuestas. Al menos una de las preguntas deberá ser de selección múltiple con múltiple respuesta. Las demás pueden ser de selección múltiple con única respuesta. Habrá una sexta y última pregunta no evaluable de comentarios, en la cual el usuario podrá escribir un texto donde formula sus opiniones sobre la prueba que acaba de presentar.</b>
+</div>
+<div class="col-md-5">
+	<div class="panel panel-default">
+		<div class="panel-heading">Lista de Preguntas</div>
+		<div class="panel-body">
+			<div class="nav nav-pills  nav-stacked">
+				<li ng-repeat="row in questions" ><a ui-sref="main.questions.answers({questionId:row.id, isComent:row.is_coment})" ui-sref-active="active" class="btn btn-default"><span ng-bind="row.question"></span></a></li>
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="col-md-7">
+	<div class="panel panel-default">
+		<div class="panel-heading">Respuestas</div>
+		<div class="panel-body">
+			<ui-view></ui-view>
+		</div>	
+	</div>
+</div>
